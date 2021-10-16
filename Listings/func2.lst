@@ -1,0 +1,43 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             My_Function,CODE,READONLY
+    2 00000000                 EXPORT           Init_2
+    3 00000000         
+    4 00000000         Init_2
+    5 00000000 F100 0064       ADD              R0,R0,#100
+    6 00000004 4770            BX               LR          ;·µ»Ø
+    7 00000006                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\func2.d -o.\objects\func2.o -I.\RTE\Device\STM32F103RC -
+I.\RTE\_Target_1 -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include -ID:\
+Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__UVISION
+_VERSION SETA 535" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_HD SETA 1"
+ --predefine="_RTE_ SETA 1" --list=.\listings\func2.lst func2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Init_2 00000000
+
+Symbol: Init_2
+   Definitions
+      At line 4 in file func2.s
+   Uses
+      At line 2 in file func2.s
+Comment: Init_2 used once
+My_Function 00000000
+
+Symbol: My_Function
+   Definitions
+      At line 1 in file func2.s
+   Uses
+      None
+Comment: My_Function unused
+2 symbols
+335 symbols in table

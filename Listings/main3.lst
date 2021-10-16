@@ -1,0 +1,61 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             main,CODE,READONLY
+    2 00000000                 import           addf
+    3 00000000                 ENTRY
+    4 00000000                 EXPORT           __main
+    5 00000000         
+    6 00000000         __main
+    7 00000000 F04F 000A       mov              r0,#10      ;给两个参数赋值
+    8 00000004 F04F 010C       mov              r1,#12
+    9 00000008 F7FF FFFE       bl               addf        ;调用函数
+   10 0000000C                 end
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\main3.d -o.\objects\main3.o -I.\RTE\Device\STM32F103RC -
+I.\RTE\_Target_1 -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Core\Include -ID:\
+Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__UVISION
+_VERSION SETA 535" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_HD SETA 1"
+ --predefine="_RTE_ SETA 1" --list=.\listings\main3.lst main3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 6 in file main3.s
+   Uses
+      At line 4 in file main3.s
+Comment: __main used once
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 1 in file main3.s
+   Uses
+      None
+Comment: main unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+addf 00000000
+
+Symbol: addf
+   Definitions
+      At line 2 in file main3.s
+   Uses
+      At line 9 in file main3.s
+Comment: addf used once
+1 symbol
+336 symbols in table

@@ -1,0 +1,7 @@
+--cpu Cortex-M3
+".\objects\led.o"
+".\objects\leddd.o"
+--strict --scatter ".\Objects\led_huibian.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\led_huibian.map" -o .\Objects\led_huibian.axf
