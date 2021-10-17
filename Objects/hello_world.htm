@@ -1,0 +1,51 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\hello_world.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\hello_world.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6160001: Last Updated: Sun Oct 17 10:59:51 2021
+<BR><P>
+<H3>Maximum Stack Usage =          0 bytes + Unknown(Functions without stacksize, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[0]">Start</a>
+ <LI><a href="#[1]">NMI_Handler</a>
+ <LI><a href="#[2]">HardFault_Handler</a>
+ <LI><a href="#[3]">SysTick_Handler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[2]">HardFault_Handler</a> from hello_word.o(.text) referenced from hello_word.o(RESET)
+ <LI><a href="#[1]">NMI_Handler</a> from hello_word.o(.text) referenced from hello_word.o(RESET)
+ <LI><a href="#[0]">Start</a> from hello_word.o(.text) referenced from hello_word.o(RESET)
+ <LI><a href="#[3]">SysTick_Handler</a> from hello_word.o(.text) referenced from hello_word.o(RESET)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3><P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[0]"></a>Start</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, hello_word.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> hello_word.o(RESET)
+</UL>
+<P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, hello_word.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> hello_word.o(RESET)
+</UL>
+<P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, hello_word.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> hello_word.o(RESET)
+</UL>
+<P><STRONG><a name="[3]"></a>SysTick_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, hello_word.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> hello_word.o(RESET)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"the_cubemx_led\startup_stm32f103xb.o"
+"the_cubemx_led\main.o"
+"the_cubemx_led\gpio.o"
+"the_cubemx_led\stm32f1xx_it.o"
+"the_cubemx_led\stm32f1xx_hal_msp.o"
+"the_cubemx_led\stm32f1xx_hal_gpio_ex.o"
+"the_cubemx_led\stm32f1xx_hal_tim.o"
+"the_cubemx_led\stm32f1xx_hal_tim_ex.o"
+"the_cubemx_led\stm32f1xx_hal.o"
+"the_cubemx_led\stm32f1xx_hal_rcc.o"
+"the_cubemx_led\stm32f1xx_hal_rcc_ex.o"
+"the_cubemx_led\stm32f1xx_hal_gpio.o"
+"the_cubemx_led\stm32f1xx_hal_dma.o"
+"the_cubemx_led\stm32f1xx_hal_cortex.o"
+"the_cubemx_led\stm32f1xx_hal_pwr.o"
+"the_cubemx_led\stm32f1xx_hal_flash.o"
+"the_cubemx_led\stm32f1xx_hal_flash_ex.o"
+"the_cubemx_led\stm32f1xx_hal_exti.o"
+"the_cubemx_led\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "the_cubemx_led\the_cubemx_led.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "the_cubemx_led.map" -o the_cubemx_led\the_cubemx_led.axf

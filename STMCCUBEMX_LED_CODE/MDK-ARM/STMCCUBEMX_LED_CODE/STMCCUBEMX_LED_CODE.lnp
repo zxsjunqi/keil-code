@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"stmccubemx_led_code\startup_stm32f103xb.o"
+"stmccubemx_led_code\main.o"
+"stmccubemx_led_code\gpio.o"
+"stmccubemx_led_code\stm32f1xx_it.o"
+"stmccubemx_led_code\stm32f1xx_hal_msp.o"
+"stmccubemx_led_code\stm32f1xx_hal_gpio_ex.o"
+"stmccubemx_led_code\stm32f1xx_hal_tim.o"
+"stmccubemx_led_code\stm32f1xx_hal_tim_ex.o"
+"stmccubemx_led_code\stm32f1xx_hal.o"
+"stmccubemx_led_code\stm32f1xx_hal_rcc.o"
+"stmccubemx_led_code\stm32f1xx_hal_rcc_ex.o"
+"stmccubemx_led_code\stm32f1xx_hal_gpio.o"
+"stmccubemx_led_code\stm32f1xx_hal_dma.o"
+"stmccubemx_led_code\stm32f1xx_hal_cortex.o"
+"stmccubemx_led_code\stm32f1xx_hal_pwr.o"
+"stmccubemx_led_code\stm32f1xx_hal_flash.o"
+"stmccubemx_led_code\stm32f1xx_hal_flash_ex.o"
+"stmccubemx_led_code\stm32f1xx_hal_exti.o"
+"stmccubemx_led_code\system_stm32f1xx.o"
+--strict --scatter "STMCCUBEMX_LED_CODE\STMCCUBEMX_LED_CODE.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "STMCCUBEMX_LED_CODE.map" -o STMCCUBEMX_LED_CODE\STMCCUBEMX_LED_CODE.axf
