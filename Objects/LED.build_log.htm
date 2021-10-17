@@ -34,20 +34,42 @@ leddd.c(13): note: declare 'static' if the function is not intended to be used o
 void  Delay_ms( volatile  unsigned  int  t)
 ^
 static 
-1 warning generated.
+leddd.c(19): warning: no previous prototype for function 'A_LED_LIGHT' [-Wmissing-prototypes]
+void A_LED_LIGHT(){
+     ^
+leddd.c(19): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void A_LED_LIGHT(){
+^
+static 
+leddd.c(19): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void A_LED_LIGHT(){
+                ^
+leddd.c(24): warning: no previous prototype for function 'B_LED_LIGHT' [-Wmissing-prototypes]
+void B_LED_LIGHT(){
+     ^
+leddd.c(24): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void B_LED_LIGHT(){
+^
+static 
+leddd.c(24): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void B_LED_LIGHT(){
+                ^
+leddd.c(29): warning: no previous prototype for function 'C_LED_LIGHT' [-Wmissing-prototypes]
+void C_LED_LIGHT(){
+     ^
+leddd.c(29): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void C_LED_LIGHT(){
+^
+static 
+leddd.c(29): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void C_LED_LIGHT(){
+                ^
+7 warnings generated.
 compiling leddd.c...
-RTE/Device/STM32F103C8/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-            ^
-RTE/Device/STM32F103C8/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
-    ^
-1 warning generated.
-compiling system_stm32f10x.c...
 linking...
-Program Size: Code=848 RO-data=252 RW-data=0 ZI-data=1632  
+Program Size: Code=892 RO-data=252 RW-data=0 ZI-data=1632  
 FromELF: creating hex file...
-".\Objects\LED.axf" - 0 Error(s), 2 Warning(s).
+".\Objects\LED.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -74,11 +96,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.5.0
 
    * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Source file:   Device\Source\system_stm32f10x.c
-      Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

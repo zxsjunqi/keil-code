@@ -16,6 +16,21 @@ void  Delay_ms( volatile  unsigned  int  t)
      while(t--)
          for (i=0;i<800;i++);
 }
+void A_LED_LIGHT(){
+	GPIOA_ORD=0x0<<7;		//PA7低电平
+	GPIOB_ORD=0x1<<9;		//PB9高电平
+	GPIOC_ORD=0x1<<15;		//PC15高电平
+}
+void B_LED_LIGHT(){
+	GPIOA_ORD=0x1<<7;		//PA7高电平
+	GPIOB_ORD=0x0<<9;		//PB9低电平
+	GPIOC_ORD=0x1<<15;		//PC15高电平
+}
+void C_LED_LIGHT(){
+	GPIOA_ORD=0x1<<7;		//PA7高电平
+	GPIOB_ORD=0x1<<9;		//PB9高电平
+	GPIOC_ORD=0x0<<15;		//PC15低电平	
+}
 //------------------------主函数--------------------------
 int main()
 {
@@ -26,7 +41,7 @@ int main()
 	//这两行代码可以合为 RCC_APB2ENR|=1<<3|1<<4;
 	GPIOA_CRL&=0x0FFFFFFF;		//设置位 清零	
 	GPIOA_CRL|=0x20000000;		//PA7推挽输出
-	GPIOA_ORD|=1<<7;			//设置初始灯为亮
+	GPIOA_ORD|=1<<7;			//设置PA7初始灯为灭
 	
 	GPIOB_CRH&=0xFFFFFF0F;		//设置位 清零	
 	GPIOB_CRH|=0x00000020;		//PB9推挽输出
@@ -37,20 +52,12 @@ int main()
 	GPIOC_ORD|=0x1<<15;			//设置初始灯为灭	
 	while(j)
 	{	
-		GPIOA_ORD=0x0<<7;		//PA7低电平	
-		Delay_ms(1000000);
-		GPIOA_ORD=0x1<<7;		//PA7高电平
-		Delay_ms(1000000);
-		
-		GPIOB_ORD=0x0<<9;		//PB9低电平	
-		Delay_ms(1000000);
-		GPIOB_ORD=0x1<<9;		//PB9高电平
-		Delay_ms(1000000);
-		
-		GPIOC_ORD=0x0<<15;		//PC15低电平	
-		Delay_ms(1000000);
-		GPIOC_ORD=0x1<<15;		//PC15高电平
-		Delay_ms(1000000);
+		A_LED_LIGHT();	
+		Delay_ms(10000000);
+		B_LED_LIGHT();
+		Delay_ms(10000000);
+		C_LED_LIGHT();
+		Delay_ms(10000000);
 	}
 }
 
